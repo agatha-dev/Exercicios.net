@@ -1,4 +1,8 @@
-﻿//digite um número e encontre o sucessor dele
+﻿using DotLiquid.Util;
+using System.Globalization;
+
+
+//digite um número e encontre o sucessor dele
 
 int x, sucessor = 0;
 
@@ -42,9 +46,9 @@ Console.WriteLine("Meu nome é: " + Nome, "");
 // O programama deverá calcular sua média e informar se o aluno foi aprovado ou não.
 // O número seis é o valor mínimo para aprovação.
 
-string  N;
+string N;
 float NotaUm = 0;
-float NotaDois = 0; 
+float NotaDois = 0;
 float NotaTres = 0;
 float NotaQuatro = 0;
 Console.WriteLine("Escreva seu nome!");
@@ -68,4 +72,51 @@ else
 }
 Console.ReadLine();
 
-//
+//Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma
+//mensagem explicativa, conforme exemplos
+
+
+
+Console.WriteLine("Escreva um valor:");
+int valor = 0;
+valor = int.Parse(Console.ReadLine());
+Console.WriteLine("Escreva o segundo valor:");
+int valorUm = 0;
+valorUm = int.Parse(Console.ReadLine());
+float soma = (valor + valorUm);
+Console.WriteLine("A soma é " + soma);
+
+//Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro
+//casas decimais conforme exemplos.Fórmula da área: area = π.raio2
+//Considere o valor de π = 3.14159
+
+double r, a, pi = 3.14159;
+
+r = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+a = pi * r * r;
+
+Console.WriteLine("A=" + a.ToString("F4", CultureInfo.InvariantCulture));
+
+//Fazer um programa para ler quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença do produto
+//de A e B pelo produto de C e D segundo a fórmula: DIFERENCA = (A * B - C * D).
+
+int A = 0;
+Console.WriteLine("Digite um valor inteiro:");
+A = int.Parse(Console.ReadLine());
+int B = 0;
+Console.WriteLine("Digite um valor inteiro:");
+B = int.Parse(Console.ReadLine());
+int C = 0;
+Console.WriteLine("Digite um valor inteiro:");
+C = int.Parse(Console.ReadLine());
+int D = 0;
+Console.WriteLine("Digite um valor inteiro:");
+D = int.Parse(Console.ReadLine());
+double calculo;
+calculo = (A * B - C * D);
+Console.WriteLine("A diferença do produto é " + calculo);
+
+//Fazer um programa que leia o número de um funcionário, seu número de horas trabalhadas,
+//o valor que recebe por hora e calcula o salário desse funcionário.
+//A seguir, mostre o número e o salário do funcionário, com duas casas decimais.
