@@ -1,8 +1,9 @@
 ﻿using DotLiquid.Util;
 using System.Globalization;
+using System.Globalization;
 
 
-//digite um número e encontre o sucessor dele
+////digite um número e encontre o sucessor dele
 
 int x, sucessor = 0;
 
@@ -15,7 +16,7 @@ sucessor = sucessor + 1;
 Console.WriteLine("O sucessor de  " + x + " é  " + sucessor);
 Console.ReadKey();
 
-//Desenvolva um algoritmo que solicite a entrada de um número e calcule se o número é par ou impar.
+////Desenvolva um algoritmo que solicite a entrada de um número e calcule se o número é par ou impar.
 
 int umNumero = x;
 Console.WriteLine("Digite um número!");
@@ -32,7 +33,7 @@ else
 Console.ReadKey();
 
 
-//Desenvolva um algoritmo que permita a entrada do nome do usuário e exiba na tela.
+////Desenvolva um algoritmo que permita a entrada do nome do usuário e exiba na tela.
 
 String Nome;
 Console.WriteLine("Escreva seu Nome!");
@@ -42,9 +43,9 @@ Console.WriteLine("Meu nome é: " + Nome, "");
 
 
 
-//Crie um algoritmo no qual o usuário/aluno deverá  informar seu nome e quatro notas.
-// O programama deverá calcular sua média e informar se o aluno foi aprovado ou não.
-// O número seis é o valor mínimo para aprovação.
+////Crie um algoritmo no qual o usuário/aluno deverá  informar seu nome e quatro notas.
+//// O programama deverá calcular sua média e informar se o aluno foi aprovado ou não.
+//// O número seis é o valor mínimo para aprovação.
 
 string N;
 float NotaUm = 0;
@@ -72,8 +73,8 @@ else
 }
 Console.ReadLine();
 
-//Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma
-//mensagem explicativa, conforme exemplos
+////Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma
+////mensagem explicativa, conforme exemplos
 
 
 
@@ -86,9 +87,9 @@ valorUm = int.Parse(Console.ReadLine());
 float soma = (valor + valorUm);
 Console.WriteLine("A soma é " + soma);
 
-//Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro
-//casas decimais conforme exemplos.Fórmula da área: area = π.raio2
-//Considere o valor de π = 3.14159
+////Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro
+////casas decimais conforme exemplos.Fórmula da área: area = π.raio2
+////Considere o valor de π = 3.14159
 
 double r, a, pi = 3.14159;
 
@@ -98,8 +99,8 @@ a = pi * r * r;
 
 Console.WriteLine("A=" + a.ToString("F4", CultureInfo.InvariantCulture));
 
-//Fazer um programa para ler quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença do produto
-//de A e B pelo produto de C e D segundo a fórmula: DIFERENCA = (A * B - C * D).
+////Fazer um programa para ler quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença do produto
+////de A e B pelo produto de C e D segundo a fórmula: DIFERENCA = (A * B - C * D).
 
 int A = 0;
 Console.WriteLine("Digite um valor inteiro:");
@@ -117,6 +118,42 @@ double calculo;
 calculo = (A * B - C * D);
 Console.WriteLine("A diferença do produto é " + calculo);
 
-//Fazer um programa que leia o número de um funcionário, seu número de horas trabalhadas,
-//o valor que recebe por hora e calcula o salário desse funcionário.
-//A seguir, mostre o número e o salário do funcionário, com duas casas decimais.
+
+//Fazer um programa que leia o número de um funcionário, seu número de horas trabalhadas, o valor que recebe por
+//hora e calcula o salário desse funcionário. A seguir, mostre o número e o salário do funcionário, com duas casas
+//decimais
+
+int numbr = 0;
+Console.WriteLine("Digite seu número de funcionário:");
+numbr = int.Parse(Console.ReadLine());
+int horas = 0;
+Console.WriteLine("Digite suas horas trabalhadas:");
+horas = int.Parse(Console.ReadLine());
+int valor = 0;
+Console.WriteLine("Digit quanto você ganha por hora:");
+valor = int.Parse(Console.ReadLine());
+int calculo = (horas * valor);
+Console.WriteLine("Seu salário é de:" + calculo);
+
+//Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o
+//código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago.
+
+
+
+
+int cod1, cod2, qte1, qte2;
+double preco1, preco2, total;
+
+string[] valores = Console.ReadLine().Split(' ');
+cod1 = int.Parse(valores[0]);
+qte1 = int.Parse(valores[1]);
+preco1 = double.Parse(valores[2], CultureInfo.InvariantCulture);
+
+valores = Console.ReadLine().Split(' ');
+cod2 = int.Parse(valores[0]);
+qte2 = int.Parse(valores[1]);
+preco2 = double.Parse(valores[2], CultureInfo.InvariantCulture);
+
+total = preco1 * qte1 + preco2 * qte2;
+
+Console.WriteLine("VALOR A PAGAR: R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
