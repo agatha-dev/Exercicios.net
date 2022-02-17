@@ -181,3 +181,19 @@ Console.WriteLine("Seu saldo atual é de: " + saldo);
 string nomeP = "Ágatha seja bem-vinda!";
 Console.WriteLine(nomeP);
 
+//Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar.
+int N = 0;
+Console.WriteLine("Digite um número: ");
+N = Convert.ToInt32(Console.ReadLine());
+
+if(N % 2 == 0)
+{
+    Console.WriteLine("Par");
+}
+else
+{
+    Console.WriteLine("Impar");
+}
+Console.ReadKey();
+
+
