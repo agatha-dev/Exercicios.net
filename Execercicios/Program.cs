@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using Exercicios;
+using System.Globalization;
 
 
 //digite um número e encontre o sucessor dele
@@ -186,7 +187,7 @@ int N = 0;
 Console.WriteLine("Digite um número: ");
 N = Convert.ToInt32(Console.ReadLine());
 
-if(N % 2 == 0)
+if (N % 2 == 0)
 {
     Console.WriteLine("Par");
 }
@@ -195,5 +196,103 @@ else
     Console.WriteLine("Impar");
 }
 Console.ReadKey();
+
+//Escreva um programa que repita a leitura de uma senha até que ela seja válida. Para cada leitura de senha
+//incorreta informada, escrever a mensagem "Senha Invalida". Quando a senha for informada corretamente deve ser
+//impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta é o valor 2002
+
+
+int senha = int.Parse(Console.ReadLine());
+
+while (senha != 2002)
+{
+    Console.WriteLine("Acesso negado");
+}
+Console.WriteLine("Acesso permitido");
+
+//DIGA QUAL O TRIANGULO MAIOR 
+
+Triangulo x, y;
+
+x = new Triangulo();
+y = new Triangulo();
+double xA, xB, xC, yA, yB, yC;
+
+Console.WriteLine("Entre com as medidas do triangulo x:");
+x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+Console.WriteLine("Entre com as medidas do triangulo y:");
+y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+double p = (x.A + x.B + x.C) / 2.0;
+double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+
+p = (y.A + y.B + y.C) / 2.0;
+double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+
+Console.WriteLine("Área de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
+Console.WriteLine("Área de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
+
+if (areaX > areaY)
+{
+    Console.WriteLine("Maior área: X:");
+}
+else
+{
+    Console.WriteLine("Maior área: Y");
+}
+
+//Fazer um programa para ler os dados de duas pessoas, depois mostrar o nome da pessoa mais velha.
+
+
+Pessoa p1 = new Pessoa();
+Pessoa p2 = new Pessoa();
+
+Console.WriteLine("Dados da primeira pessoa: ");
+Console.Write("Nome: ");
+p1.Nome = Console.ReadLine();
+Console.WriteLine("Idade: ");
+p1.Idade = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Dados da segunda pessoa: ");
+Console.Write("Nome: ");
+p2.Nome = Console.ReadLine();
+Console.WriteLine("Idade: ");
+p2.Idade = int.Parse(Console.ReadLine());
+
+if (p1.Idade > p2.Idade)
+{
+    Console.WriteLine("A pessoa mais velha é: " + p1.Nome);
+}
+else
+{
+    Console.WriteLine("A pessoa mais velha é: " + p2.Nome);
+}
+
+//Fazer um programa para ler nome e salário de dois funcionários. Depois, mostrar o salário
+//médio dos funcionários.
+
+
+Pessoa p3 = new Pessoa();
+Pessoa p4   = new Pessoa();
+
+Console.WriteLine("Dados da primeira pessoa: ");
+Console.Write("Nome: ");
+p3.Nome = Console.ReadLine();
+Console.WriteLine("Salario: ");
+p3.Salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+Console.WriteLine("Dados da segunda pessoa: ");
+Console.Write("Nome: ");
+p4.Nome = Console.ReadLine();
+Console.WriteLine("Salario: ");
+p4.Salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+double media = (p3.Salario + p4.Salario) / 2;
+Console.WriteLine("Salario médio é: " + media.ToString("F2", CultureInfo.InvariantCulture));
 
 
