@@ -212,27 +212,27 @@ Console.WriteLine("Acesso permitido");
 
 //DIGA QUAL O TRIANGULO MAIOR 
 
-Triangulo x, y;
+Triangulo x1, y2;
 
-x = new Triangulo();
-y = new Triangulo();
+x1 = new Triangulo();
+y2 = new Triangulo();
 double xA, xB, xC, yA, yB, yC;
 
 Console.WriteLine("Entre com as medidas do triangulo x:");
-x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+x1.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+x1.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+x1.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
 Console.WriteLine("Entre com as medidas do triangulo y:");
-y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+y2.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+y2.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+y2.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-double p = (x.A + x.B + x.C) / 2.0;
-double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+double p = (x1.A + x1.B + x1.C) / 2.0;
+double areaX = Math.Sqrt(p * (p - x1.A) * (p - x1.B) * (p - x1.C));
 
-p = (y.A + y.B + y.C) / 2.0;
-double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+p = (y2.A + y2.B + y2.C) / 2.0;
+double areaY = Math.Sqrt(p * (p - y2.A) * (p - y2.B) * (p - y2.C));
 
 Console.WriteLine("Área de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
 Console.WriteLine("Área de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
@@ -278,7 +278,7 @@ else
 
 
 Pessoa p3 = new Pessoa();
-Pessoa p4   = new Pessoa();
+Pessoa p4 = new Pessoa();
 
 Console.WriteLine("Dados da primeira pessoa: ");
 Console.Write("Nome: ");
@@ -296,3 +296,15 @@ double media = (p3.Salario + p4.Salario) / 2;
 Console.WriteLine("Salario médio é: " + media.ToString("F2", CultureInfo.InvariantCulture));
 
 
+////
+Produto pr = new Produto();
+
+Console.WriteLine("Entre com os produtos: ");
+Console.Write("Nome: ");
+pr.NomeProduto = Console.ReadLine();
+Console.Write("Preço: ");
+pr.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+Console.Write("Quantidade no estoque: ");
+pr.Quantidade = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Dados do Produto: " + pr);
