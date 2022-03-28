@@ -13,4 +13,6 @@ namespace Exercicios
         public double C;
 
     }
+
+
 }

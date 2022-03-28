@@ -296,7 +296,8 @@ double media = (p3.Salario + p4.Salario) / 2;
 Console.WriteLine("Salario médio é: " + media.ToString("F2", CultureInfo.InvariantCulture));
 
 
-////
+///Peça para entrar com o nome, quantidade de produto e dps quanto vai adicionar e retirar
+
 Produto pr = new Produto();
 
 Console.WriteLine("Entre com os produtos: ");
@@ -308,3 +309,16 @@ Console.Write("Quantidade no estoque: ");
 pr.Quantidade = int.Parse(Console.ReadLine());
 
 Console.WriteLine("Dados do Produto: " + pr);
+Console.WriteLine();
+Console.Write("Digite o número de produtos  a ser adicionado no estoque: ");
+int qte = int.Parse(Console.ReadLine());
+pr.AdicionarProdutos(qte);
+Console.WriteLine();
+Console.WriteLine("Dados atualizados: " + pr);
+
+Console.WriteLine();
+Console.Write("Digite o número de produtos  a ser removidos no estoque: ");
+qte = int.Parse(Console.ReadLine());
+pr.RemoverProdutos(qte);
+Console.WriteLine();
+Console.WriteLine("Dados atualizados: " + pr);
