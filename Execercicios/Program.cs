@@ -322,3 +322,22 @@ qte = int.Parse(Console.ReadLine());
 pr.RemoverProdutos(qte);
 Console.WriteLine();
 Console.WriteLine("Dados atualizados: " + pr);
+
+
+
+//Desenvolva um algoritmo que solicite a entrada da idade de um determinado usuário, se for menor que 18 anos exiba na
+//  cor vermelha “Sem permissão”, caso seja maior ou igual a 18 anos exiba na cor verde “Permissão concedida”.
+
+Console.WriteLine("Entre com sua idade: ");
+int idade = int.Parse(Console.ReadLine());
+if (idade > 18)
+{
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("Permissão concedida");
+}
+else
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Sem permissão");
+}
+

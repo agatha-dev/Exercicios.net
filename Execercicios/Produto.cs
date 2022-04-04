@@ -27,7 +27,11 @@ namespace Exercicios
         {
             Quantidade -= quantidade;
         }
+        public void InvestSemana(int semana, int mes, int dia,int  valor)
+        {
 
+           
+        }
         public override string ToString()
         {
             return NomeProduto + ", $ " 
