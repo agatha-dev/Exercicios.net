@@ -1,46 +1,40 @@
 ﻿using System;
 using System.Globalization;
-
 namespace Treinamento.NET
 {
-    class Produto
+    class Program
     {
-            public string Nome;
-            public double Preco;
-            public int Quantidade;
-
-        public Produto(string nome, double preco, int quantidade)
+        static void Main(string[] args)
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
-        }
-
-        public double ValorTotalEmEstoque()
-        {
-            return Preco * Quantidade;
-        }
-
-        public void AdicionarProdutos(int quantidade)
-        {
-            Quantidade += quantidade;
-        }
-
-        public void RemoverProdutos(int quantidade)
-        {
-            Quantidade -= quantidade;
-        }
-        public override string ToString()
-        {
-            return Nome
-            + ", $ "
-            + Preco.ToString("F2", CultureInfo.InvariantCulture)
-            + ", "
-            + Quantidade
-            + " unidades, Total: $ "
-            + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
-        }
+            //Produto p = new Produto("TV", 500.0, 10);
+            //Console.WriteLine(p);
 
 
+            Console.WriteLine("Entre os dados do produto:");
+            Console.Write("Nome: ");
+            string nome = Console.ReadLine();
+            Console.Write("Preço: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Produto p = new Produto(nome, preco);
+            Console.WriteLine();
+            Console.WriteLine("Dados do produto: " + p);
+            Console.WriteLine();
+
+            Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
+            Console.WriteLine();
+
+            Console.Write("Digite o número de produtos a ser removido do estoque: ");
+            qte = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qte);
+            Console.WriteLine();
+
+            Console.WriteLine("Dados atualizados: " + p);
+
+        }
     }
 }
